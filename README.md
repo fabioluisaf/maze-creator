@@ -1,2 +1,2 @@
 # Maze creator
-A simple program that creates a maze using the Depth First Search algorithm.
+A program that creates mazes using various algorithms and solves it, giving a difficulty rating based on how long did the A* algorithm took to solve the maze.

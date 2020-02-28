@@ -14,7 +14,7 @@ async function dfs_generation(grid) {
       let index = Math.floor(Math.random() * unvisited.length);
       let v = unvisited[index];
 
-      v.setParent(u);
+      v.addNeighbor(u);
       stack.push(v);
     } else {
       stack.pop();
@@ -23,6 +23,9 @@ async function dfs_generation(grid) {
     mazeHead = stack.top();
     await sleep(delay);
   }
+
+  console.log("Finished Building DFS maze!");
+  finishedBuilding = true;
 }
 
 function unvisitedNeighbors(u, grid) {
